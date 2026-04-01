@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+.contact-page {
+  background: #fcfdfc;
+  min-height: 90vh;
+  padding: 80px 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.headset-icon {
+  font-size: 50px;
+  color: #5d8233;
+  margin-bottom: 20px;
+}
+
+.contact-header h1 { font-size: 3rem; color: #1b3008; font-weight: 800; }
+.contact-header p { color: #64748b; font-size: 1.1rem; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Instant Call Card */
+.contact-card.instant-call {
+  background: white;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+  border: 1px solid #f1f5f1;
+  position: relative;
+}
+
+.card-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #ff4d4d;
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+
+.instant-call h3 { font-size: 1.8rem; color: #1b3008; margin-bottom: 10px; }
+.instant-call p { color: #64748b; margin-bottom: 30px; line-height: 1.6; }
+
+.phone-input-group {
+  display: flex;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.phone-input-group:focus-within { border-color: #5d8233; background: white; }
+
+.country-code {
+  padding: 15px 20px;
+  background: #eef2ee;
+  font-weight: 800;
+  color: #1b3008;
+  border-right: 2px solid #e2e8f0;
+}
+
+.phone-input-group input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  outline: none;
+}
+
+.call-trigger-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 18px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.1rem;
+  transition: 0.4s;
+}
+
+.call-trigger-btn.disabled {
+  background: #e2e8f0;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.call-trigger-btn.active {
+  background: #1b3008;
+  color: white;
+  box-shadow: 0 10px 20px rgba(27, 48, 8, 0.2);
+}
+
+.call-trigger-btn.active:hover { transform: translateY(-3px); background: #5d8233; }
+
+.helper-text { font-size: 12px; text-align: center; margin-top: 15px !important; }
+
+/* Support Options Right Side */
+.support-options { display: flex; flex-direction: column; gap: 20px; }
+
+.mini-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  border: 1px solid #f1f5f9;
+}
+
+.mini-card svg { font-size: 24px; margin-top: 5px; }
+.wa-icon { color: #25d366; }
+.en-icon { color: #3b82f6; }
+.loc-icon { color: #ef4444; }
+
+.mini-card h4 { margin: 0; font-size: 1.1rem; color: #1b3008; }
+.mini-card p { margin: 5px 0 10px; font-size: 0.9rem; color: #64748b; }
+.mini-card a, .map-btn {
+  color: #5d8233;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-header h1 { font-size: 2rem; }
+}

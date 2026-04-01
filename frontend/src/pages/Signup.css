@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap');
+
+.signup-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fdfdfd;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.signup-card {
+  width: 950px;
+  height: 600px;
+  display: flex;
+  background: white;
+  border-radius: 40px;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.08);
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+}
+
+/* Visual Side */
+.signup-visual {
+  width: 40%;
+  background: url('https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=1887') no-repeat center center;
+  background-size: cover;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.visual-blur-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 25px;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.visual-blur-box h3 { font-size: 1.8rem; margin-bottom: 10px; }
+.visual-blur-box p { font-size: 0.9rem; opacity: 0.9; line-height: 1.5; }
+
+/* Form Side */
+.signup-form-container {
+  width: 60%;
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-header h1 { font-size: 2.2rem; color: #1a2e05; font-weight: 800; margin-bottom: 8px; }
+.form-header p { color: #87a96b; font-weight: 600; margin-bottom: 40px; }
+
+.input-group { margin-bottom: 25px; }
+.input-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #4b5563;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.label-icon { color: #5d8233; }
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  background: #f9fafb;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 0 15px;
+}
+
+.phone-input span { font-weight: 700; color: #1b3008; border-right: 1px solid #e5e7eb; padding-right: 10px; }
+.phone-input input, .input-group input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+  font-weight: 600;
+}
+
+/* OTP Digits */
+.otp-input-wrapper {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.otp-digit {
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  border: 2px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+}
+
+.otp-digit:focus { border-color: #5d8233 !important; box-shadow: 0 0 10px rgba(93, 130, 51, 0.2); }
+
+.signup-main-btn {
+  width: 100%;
+  background: #1b3008;
+  color: white;
+  padding: 18px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: 0.3s;
+}
+
+.signup-main-btn:hover { background: #5d8233; transform: scale(1.02); }
+
+.resend-link {
+  background: none;
+  border: none;
+  color: #5d8233;
+  font-weight: 700;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.footer-text { text-align: center; margin-top: 30px; font-weight: 500; color: #64748b; }
+.footer-text a { color: #1b3008; text-decoration: none; font-weight: 800; }
+
+@media (max-width: 850px) {
+  .signup-visual { display: none; }
+  .signup-card { width: 100%; max-width: 450px; height: auto; border-radius: 0; }
+  .signup-form-container { width: 100%; padding: 40px 20px; }
+}
+
+
+/* This part fixes the invisible border */
+.modern-input {
+  width: 100%;
+  padding: 14px 16px !important; /* Forces padding */
+  border: 1.5px solid #e5e7eb !important; /* Light grey border */
+  border-radius: 14px !important;
+  background-color: #ffffff !important; /* Solid white background */
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a2e05;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+
+/* Adds a nice green glow when you click inside the name box */
+.modern-input:focus {
+  border-color: #5d8233 !important;
+  background-color: #f9fbf9 !important;
+  box-shadow: 0 0 0 4px rgba(93, 130, 51, 0.1);
+}
+
+/* Also update the phone-input container to match exactly */
+.phone-input {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 0 15px;
+  transition: all 0.3s ease;
+}
+
+.phone-input:focus-within {
+  border-color: #5d8233;
+  box-shadow: 0 0 0 4px rgba(93, 130, 51, 0.1);
+}
+
+
+
+
+/* Success View Styling */
+.success-view {
+  text-align: center;
+  animation: scaleUp 0.5s ease-out forwards;
+}
+
+.success-icon-container {
+  margin-bottom: 25px;
+}
+
+.success-check-icon {
+  font-size: 80px;
+  color: #5d8233;
+  animation: pulseCheck 1.5s infinite ease-in-out;
+}
+
+.success-view h2 {
+  font-size: 2rem;
+  color: #1a2e05;
+  margin-bottom: 15px;
+}
+
+.success-view p {
+  color: #64748b;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes scaleUp {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulseCheck {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
